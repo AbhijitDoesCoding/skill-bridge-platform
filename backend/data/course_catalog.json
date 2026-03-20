@@ -1,0 +1,268 @@
+{
+  "courses": [
+    {
+      "id": "PY101",
+      "title": "Python Fundamentals",
+      "category": "Programming",
+      "difficulty": "beginner",
+      "duration_hours": 20,
+      "prerequisites": [],
+      "skills_covered": ["Python"],
+      "competency_level": "beginner",
+      "description": "Core Python syntax, control flow, and functions."
+    },
+    {
+      "id": "PY201",
+      "title": "Object-Oriented Python",
+      "category": "Programming",
+      "difficulty": "intermediate",
+      "duration_hours": 18,
+      "prerequisites": ["PY101"],
+      "skills_covered": ["Python"],
+      "competency_level": "intermediate",
+      "description": "Classes, inheritance, testing, and packaging in Python."
+    },
+    {
+      "id": "WEB101",
+      "title": "JavaScript Essentials",
+      "category": "Programming",
+      "difficulty": "beginner",
+      "duration_hours": 16,
+      "prerequisites": [],
+      "skills_covered": ["Javascript"],
+      "competency_level": "beginner",
+      "description": "JavaScript fundamentals for modern web applications."
+    },
+    {
+      "id": "WEB201",
+      "title": "React Application Development",
+      "category": "Programming",
+      "difficulty": "intermediate",
+      "duration_hours": 24,
+      "prerequisites": ["WEB101"],
+      "skills_covered": ["Javascript"],
+      "competency_level": "intermediate",
+      "description": "React components, hooks, and state management."
+    },
+    {
+      "id": "DS101",
+      "title": "Data Analysis Foundations",
+      "category": "Data Science",
+      "difficulty": "beginner",
+      "duration_hours": 20,
+      "prerequisites": ["PY101"],
+      "skills_covered": ["Data Analysis", "Statistics"],
+      "competency_level": "beginner",
+      "description": "Data wrangling, visualization, and basic analytics."
+    },
+    {
+      "id": "STAT101",
+      "title": "Applied Statistics",
+      "category": "Data Science",
+      "difficulty": "beginner",
+      "duration_hours": 22,
+      "prerequisites": [],
+      "skills_covered": ["Statistics"],
+      "competency_level": "beginner",
+      "description": "Probability, distributions, and inferential statistics."
+    },
+    {
+      "id": "ML201",
+      "title": "Machine Learning Essentials",
+      "category": "Data Science",
+      "difficulty": "intermediate",
+      "duration_hours": 40,
+      "prerequisites": ["PY201", "STAT101", "DS101"],
+      "skills_covered": ["Machine Learning"],
+      "competency_level": "intermediate",
+      "description": "Supervised models, model validation, and ML workflows."
+    },
+    {
+      "id": "ML301",
+      "title": "Advanced Machine Learning Systems",
+      "category": "Data Science",
+      "difficulty": "advanced",
+      "duration_hours": 45,
+      "prerequisites": ["ML201"],
+      "skills_covered": ["Machine Learning", "Python"],
+      "competency_level": "advanced",
+      "description": "Production-grade ML systems and optimization."
+    },
+    {
+      "id": "CLOUD101",
+      "title": "AWS Cloud Basics",
+      "category": "Cloud",
+      "difficulty": "beginner",
+      "duration_hours": 18,
+      "prerequisites": [],
+      "skills_covered": ["Aws"],
+      "competency_level": "beginner",
+      "description": "AWS fundamentals including IAM, EC2, and S3."
+    },
+    {
+      "id": "CLOUD201",
+      "title": "AWS for Application Engineers",
+      "category": "Cloud",
+      "difficulty": "intermediate",
+      "duration_hours": 30,
+      "prerequisites": ["CLOUD101"],
+      "skills_covered": ["Aws", "Docker"],
+      "competency_level": "intermediate",
+      "description": "Application deployment and cloud architecture on AWS."
+    },
+    {
+      "id": "DEVOPS101",
+      "title": "Docker and Containers",
+      "category": "DevOps",
+      "difficulty": "beginner",
+      "duration_hours": 16,
+      "prerequisites": [],
+      "skills_covered": ["Docker"],
+      "competency_level": "beginner",
+      "description": "Container fundamentals and image lifecycle."
+    },
+    {
+      "id": "DEVOPS201",
+      "title": "Kubernetes in Practice",
+      "category": "DevOps",
+      "difficulty": "intermediate",
+      "duration_hours": 28,
+      "prerequisites": ["DEVOPS101"],
+      "skills_covered": ["Kubernetes"],
+      "competency_level": "intermediate",
+      "description": "Kubernetes workloads, services, and scaling."
+    },
+    {
+      "id": "DEVOPS301",
+      "title": "CI/CD Engineering",
+      "category": "DevOps",
+      "difficulty": "intermediate",
+      "duration_hours": 24,
+      "prerequisites": ["DEVOPS101"],
+      "skills_covered": ["Ci Cd"],
+      "competency_level": "intermediate",
+      "description": "Automated pipelines for build, test, and release."
+    },
+    {
+      "id": "PM101",
+      "title": "Project Management Fundamentals",
+      "category": "Business",
+      "difficulty": "beginner",
+      "duration_hours": 14,
+      "prerequisites": [],
+      "skills_covered": ["Project Management"],
+      "competency_level": "beginner",
+      "description": "Project planning, scope, and execution basics."
+    },
+    {
+      "id": "PM201",
+      "title": "Agile Delivery and Scrum",
+      "category": "Business",
+      "difficulty": "intermediate",
+      "duration_hours": 16,
+      "prerequisites": ["PM101"],
+      "skills_covered": ["Project Management"],
+      "competency_level": "intermediate",
+      "description": "Agile planning, sprint ceremonies, and team delivery."
+    },
+    {
+      "id": "COM101",
+      "title": "Workplace Communication",
+      "category": "Business",
+      "difficulty": "beginner",
+      "duration_hours": 10,
+      "prerequisites": [],
+      "skills_covered": ["Communication"],
+      "competency_level": "beginner",
+      "description": "Clear written and verbal communication at work."
+    },
+    {
+      "id": "COM201",
+      "title": "Stakeholder Communication",
+      "category": "Business",
+      "difficulty": "intermediate",
+      "duration_hours": 12,
+      "prerequisites": ["COM101"],
+      "skills_covered": ["Communication"],
+      "competency_level": "intermediate",
+      "description": "Stakeholder updates, influence, and conflict handling."
+    },
+    {
+      "id": "LEAD101",
+      "title": "Leadership Essentials",
+      "category": "Business",
+      "difficulty": "beginner",
+      "duration_hours": 15,
+      "prerequisites": [],
+      "skills_covered": ["Leadership"],
+      "competency_level": "beginner",
+      "description": "People leadership, motivation, and accountability."
+    },
+    {
+      "id": "LEAD201",
+      "title": "Team Leadership Practicum",
+      "category": "Business",
+      "difficulty": "intermediate",
+      "duration_hours": 20,
+      "prerequisites": ["LEAD101"],
+      "skills_covered": ["Leadership", "Communication"],
+      "competency_level": "intermediate",
+      "description": "Leading teams through planning and execution."
+    },
+    {
+      "id": "OPS101",
+      "title": "Operational Excellence Basics",
+      "category": "Operations",
+      "difficulty": "beginner",
+      "duration_hours": 12,
+      "prerequisites": [],
+      "skills_covered": ["Process Optimization"],
+      "competency_level": "beginner",
+      "description": "Continuous improvement fundamentals."
+    },
+    {
+      "id": "OPS201",
+      "title": "Lean Process Optimization",
+      "category": "Operations",
+      "difficulty": "intermediate",
+      "duration_hours": 18,
+      "prerequisites": ["OPS101"],
+      "skills_covered": ["Process Optimization", "Quality Control"],
+      "competency_level": "intermediate",
+      "description": "Lean methods for process and workflow optimization."
+    },
+    {
+      "id": "QA101",
+      "title": "Quality Assurance Foundations",
+      "category": "Operations",
+      "difficulty": "beginner",
+      "duration_hours": 14,
+      "prerequisites": [],
+      "skills_covered": ["Quality Control"],
+      "competency_level": "beginner",
+      "description": "Quality systems and defect prevention basics."
+    },
+    {
+      "id": "SAFE101",
+      "title": "Safety and Compliance Essentials",
+      "category": "Operations",
+      "difficulty": "beginner",
+      "duration_hours": 10,
+      "prerequisites": [],
+      "skills_covered": ["Safety Compliance"],
+      "competency_level": "beginner",
+      "description": "Regulatory compliance and workplace safety principles."
+    },
+    {
+      "id": "SAFE201",
+      "title": "Risk and Compliance Management",
+      "category": "Operations",
+      "difficulty": "intermediate",
+      "duration_hours": 18,
+      "prerequisites": ["SAFE101"],
+      "skills_covered": ["Safety Compliance", "Leadership"],
+      "competency_level": "intermediate",
+      "description": "Operational risk controls and audit readiness."
+    }
+  ]
+}

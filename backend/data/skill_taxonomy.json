@@ -1,0 +1,35 @@
+{
+  "skill_taxonomy": {
+    "programming": {
+      "python": ["Python", "Python 3", "Py", "Django", "Flask", "FastAPI"],
+      "javascript": ["JavaScript", "JS", "Node.js", "React", "Vue", "TypeScript"],
+      "java": ["Java", "Spring", "J2EE"]
+    },
+    "data_science": {
+      "machine_learning": ["Machine Learning", "ML", "Deep Learning", "Neural Networks", "scikit-learn"],
+      "statistics": ["Statistics", "Statistical Analysis", "Probability", "Hypothesis Testing"],
+      "data_analysis": ["Pandas", "NumPy", "Data Analysis", "SQL", "Data Visualization"]
+    },
+    "cloud_devops": {
+      "aws": ["AWS", "Amazon Web Services", "EC2", "S3", "Lambda"],
+      "docker": ["Docker", "Containers", "Containerization"],
+      "kubernetes": ["Kubernetes", "K8s", "Helm"],
+      "ci_cd": ["CI/CD", "GitHub Actions", "Jenkins", "GitLab CI"]
+    },
+    "business": {
+      "project_management": ["Project Management", "Agile", "Scrum", "Kanban"],
+      "communication": ["Communication", "Stakeholder Management", "Presentation"],
+      "leadership": ["Leadership", "Mentoring", "Team Management"]
+    },
+    "operations": {
+      "quality_control": ["Quality Control", "QA", "Quality Assurance"],
+      "process_optimization": ["Process Optimization", "Lean", "Six Sigma"],
+      "safety_compliance": ["Safety", "Compliance", "Risk Management"]
+    }
+  },
+  "skill_levels": {
+    "beginner": ["familiar", "basic", "entry", "0-1 year"],
+    "intermediate": ["proficient", "working knowledge", "2-3 years"],
+    "advanced": ["expert", "senior", "specialized", "5+ years"]
+  }
+}

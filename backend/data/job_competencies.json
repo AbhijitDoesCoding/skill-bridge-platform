@@ -1,0 +1,26 @@
+{
+  "roles": [
+    {
+      "role_title": "Senior Machine Learning Engineer",
+      "role_category": "technical",
+      "required_skills": [
+        {"name": "Python", "level": "advanced", "priority": "must-have"},
+        {"name": "Machine Learning", "level": "advanced", "priority": "must-have"},
+        {"name": "Aws", "level": "intermediate", "priority": "must-have"},
+        {"name": "Docker", "level": "intermediate", "priority": "must-have"},
+        {"name": "Communication", "level": "intermediate", "priority": "nice-to-have"}
+      ]
+    },
+    {
+      "role_title": "Operations Supervisor",
+      "role_category": "operational",
+      "required_skills": [
+        {"name": "Process Optimization", "level": "intermediate", "priority": "must-have"},
+        {"name": "Quality Control", "level": "intermediate", "priority": "must-have"},
+        {"name": "Safety Compliance", "level": "intermediate", "priority": "must-have"},
+        {"name": "Leadership", "level": "intermediate", "priority": "must-have"},
+        {"name": "Communication", "level": "intermediate", "priority": "nice-to-have"}
+      ]
+    }
+  ]
+}
