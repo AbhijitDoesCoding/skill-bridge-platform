@@ -1,33 +1,30 @@
 export default function ReasoningTrace({ trace }) {
   return (
-    <section className="panel">
-      <h2>Reasoning Trace</h2>
-      <div className="trace-grid">
-        <article>
-          <h3>Extraction</h3>
-          <ul>
-            {(trace?.extraction_reasoning || []).map((line) => (
-              <li key={line}>{line}</li>
-            ))}
-          </ul>
-        </article>
-        <article>
-          <h3>Gap Analysis</h3>
-          <ul>
-            {(trace?.gap_analysis_reasoning || []).map((line) => (
-              <li key={line}>{line}</li>
-            ))}
-          </ul>
-        </article>
-        <article>
-          <h3>Pathway</h3>
-          <ul>
-            {(trace?.pathway_reasoning || []).map((line) => (
-              <li key={line}>{line}</li>
-            ))}
-          </ul>
-        </article>
-      </div>
-    </section>
+    <div className="trace-flex">
+      <article className="trace-item">
+        <h4>Extraction Reasoning</h4>
+        <ul className="trace-list">
+          {(trace?.extraction_reasoning || []).map((line, i) => (
+            <li key={i}>{line}</li>
+          ))}
+        </ul>
+      </article>
+      <article className="trace-item">
+        <h4>Gap Analysis Reasoning</h4>
+        <ul className="trace-list">
+          {(trace?.gap_analysis_reasoning || []).map((line, i) => (
+            <li key={i}>{line}</li>
+          ))}
+        </ul>
+      </article>
+      <article className="trace-item">
+        <h4>Pathway Tuning</h4>
+        <ul className="trace-list">
+          {(trace?.pathway_reasoning || []).map((line, i) => (
+            <li key={i}>{line}</li>
+          ))}
+        </ul>
+      </article>
+    </div>
   );
 }

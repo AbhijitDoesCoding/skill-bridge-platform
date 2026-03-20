@@ -5,43 +5,74 @@ export default function PathwayVisualizer({ pathway }) {
   const nodes = [];
   const edges = [];
 
+  const weekStyle = {
+    background: '#f4b400',
+    color: '#111',
+    padding: '10px',
+    borderRadius: '10px',
+    fontWeight: 800,
+    border: 'none',
+    width: 140,
+    textAlign: 'center',
+  };
+
+  const courseStyle = {
+    background: '#ffffff',
+    color: '#111',
+    padding: '12px',
+    borderRadius: '12px',
+    border: '1px solid #eee',
+    boxShadow: '0 4px 10px rgba(0,0,0,0.05)',
+    width: 250,
+    fontSize: '13px',
+  };
+
   let y = 0;
   for (const week of pathway?.pathway || []) {
     const weekNodeId = `week-${week.week}`;
     nodes.push({
       id: weekNodeId,
-      position: { x: 60, y },
-      data: { label: `Week ${week.week} (${week.estimated_hours}h)` },
-      style: { background: "#0b7285", color: "#fff", padding: 10, borderRadius: 8, fontWeight: 700 },
+      position: { x: 50, y },
+      data: { label: `WEEK ${week.week}` },
+      style: weekStyle,
     });
 
-    let x = 320;
+    let x = 250;
     for (const course of week.courses) {
       const courseId = `course-${course.id}`;
       nodes.push({
         id: courseId,
         position: { x, y },
         data: { label: `${course.title} (${course.duration_hours}h)` },
-        style: { width: 240, padding: 10, borderRadius: 8, border: "2px solid #0b7285", background: "#f1f3f5" },
+        style: courseStyle,
       });
-      edges.push({ id: `${weekNodeId}-${courseId}`, source: weekNodeId, target: courseId, animated: true });
+      edges.push({ 
+        id: `${weekNodeId}-${courseId}`, 
+        source: weekNodeId, 
+        target: courseId, 
+        animated: true,
+        style: { stroke: '#f4b400', strokeWidth: 2 }
+      });
       for (const prereq of course.prerequisites || []) {
-        edges.push({ id: `${prereq}-${course.id}`, source: `course-${prereq}`, target: courseId, type: "smoothstep" });
+        edges.push({ 
+          id: `${prereq}-${course.id}`, 
+          source: `course-${prereq}`, 
+          target: courseId, 
+          type: "smoothstep",
+          style: { stroke: '#ccc' }
+        });
       }
-      x += 290;
+      x += 280;
     }
-    y += 160;
+    y += 150;
   }
 
   return (
-    <section className="panel">
-      <h2>Learning Pathway</h2>
-      <div className="flow-wrap">
-        <ReactFlow nodes={nodes} edges={edges} fitView>
-          <Background />
-          <Controls />
-        </ReactFlow>
-      </div>
-    </section>
+    <div className="flow-container">
+      <ReactFlow nodes={nodes} edges={edges} fitView>
+        <Background color="#f0f0f0" gap={20} size={1} />
+        <Controls />
+      </ReactFlow>
+    </div>
   );
 }

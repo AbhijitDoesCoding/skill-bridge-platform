@@ -14,23 +14,37 @@ export default function SkillGapChart({ data }) {
     required: rank[gap.required_level] ?? 0,
   }));
 
+  const readiness = data?.readiness_percentage ?? 0;
+
   return (
-    <section className="panel">
-      <h2>Skill Gap Analysis</h2>
-      <p>Readiness: {data?.readiness_percentage ?? 0}%</p>
-      <div className="chart-wrap">
-        <ResponsiveContainer width="100%" height={320}>
-          <BarChart data={chartData}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="skill" interval={0} angle={-25} textAnchor="end" height={80} />
-            <YAxis domain={[0, 3]} ticks={[0, 1, 2, 3]} />
-            <Tooltip />
-            <Legend />
-            <Bar dataKey="current" fill="#0b7285" name="Current Level" />
-            <Bar dataKey="required" fill="#f08c00" name="Required Level" />
+    <div className="chart-container">
+       <ResponsiveContainer width="100%" height="100%">
+          <BarChart data={chartData} margin={{ top: 20, right: 30, left: 20, bottom: 50 }}>
+            <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#eee" />
+            <XAxis 
+              dataKey="skill" 
+              interval={0} 
+              angle={-25} 
+              textAnchor="end" 
+              height={80} 
+              stroke="#666" 
+              fontSize={12} 
+            />
+            <YAxis 
+              domain={[0, 3]} 
+              ticks={[0, 1, 2, 3]} 
+              stroke="#666" 
+              fontSize={12} 
+            />
+            <Tooltip 
+              cursor={{ fill: '#f9f9f9' }}
+              contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
+            />
+            <Legend verticalAlign="top" height={36}/>
+            <Bar dataKey="current" fill="#f4b400" name="Your Level" radius={[4, 4, 0, 0]} barSize={40} />
+            <Bar dataKey="required" fill="#111111" name="Required Level" radius={[4, 4, 0, 0]} barSize={40} />
           </BarChart>
         </ResponsiveContainer>
-      </div>
-    </section>
+    </div>
   );
 }

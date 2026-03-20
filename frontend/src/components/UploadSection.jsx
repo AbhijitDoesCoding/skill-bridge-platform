@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { UploadCloud, FileText, CheckCircle, Loader2 } from "lucide-react";
 
 async function uploadFile(apiBase, endpoint, file) {
   const body = new FormData();
@@ -54,18 +55,28 @@ export default function UploadSection({ apiBase, onResumeUpload, onJobUpload }) 
   };
 
   return (
-    <section className="panel upload-grid">
-      <div>
-        <h2>Resume Upload</h2>
+    <div className="upload-grid">
+      <label className="upload-card">
         <input type="file" accept=".pdf,.txt,.md" onChange={handleResume} disabled={busy} />
-        {resumeName && <p>Uploaded: {resumeName}</p>}
-      </div>
-      <div>
-        <h2>Job Description Upload</h2>
+        <div className="icon">
+          {busy ? <Loader2 size={40} className="animate-spin" /> : 
+           resumeName ? <CheckCircle size={40} color="#4caf50" /> : <UploadCloud size={40} />}
+        </div>
+        <h3>Resume Document</h3>
+        <p>{resumeName || "Drop your PDF or click to browse"}</p>
+      </label>
+
+      <label className="upload-card">
         <input type="file" accept=".pdf,.txt,.md" onChange={handleJob} disabled={busy} />
-        {jobName && <p>Uploaded: {jobName}</p>}
-      </div>
-      {error && <p className="error">{error}</p>}
-    </section>
+        <div className="icon">
+          {busy ? <Loader2 size={40} className="animate-spin" /> : 
+           jobName ? <CheckCircle size={40} color="#4caf50" /> : <FileText size={40} />}
+        </div>
+        <h3>Job Description</h3>
+        <p>{jobName || "Upload target role requirements"}</p>
+      </label>
+
+      {error && <p className="error-text" style={{ gridColumn: 'span 2' }}>{error}</p>}
+    </div>
   );
 }
